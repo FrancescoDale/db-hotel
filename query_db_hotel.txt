@@ -25,3 +25,32 @@ WHERE `date_of_birth` <= '2001-01-13';
 ------------------------------------------------------------------------------------------
 
 Seleziona tutti gli ospiti il cui nome inizia con la D
+
+SELECT *
+FROM `ospiti`
+WHERE `name` LIKE 'D%';
+
+----------------------------------------------------------------------------------------
+
+Calcola il totale degli ordini accepted
+
+SELECT COUNT(id)
+FROM `pagamenti`
+WHERE `status` = 'accepted';
+
+----------------------------------------------------------------------------------------
+
+Qual è il prezzo massimo pagato?
+
+SELECT MAX(`price`)
+FROM `pagamenti`;
+
+---------------------------------------------------------------------------------------
+
+Seleziona gli ospiti riconosciuti con patente e nati nel 1975
+
+SELECT *
+FROM `ospiti`
+WHERE `document_type` = 'Driver License'
+AND  `date_of_birth` >= '1975-1-1'
+AND  `date_of_birth` <= '1975-12-31';
