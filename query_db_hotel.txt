@@ -22,6 +22,12 @@ SELECT *
 FROM `ospiti`
 WHERE `date_of_birth` <= '2001-01-13';
 
+oppure
+
+SELECT *
+FROM `ospiti`
+WHERE year(CURDATE()) - year(`date_of_birth`) > 20;
+
 ------------------------------------------------------------------------------------------
 
 Seleziona tutti gli ospiti il cui nome inizia con la D
@@ -54,3 +60,17 @@ FROM `ospiti`
 WHERE `document_type` = 'Driver License'
 AND  `date_of_birth` >= '1975-1-1'
 AND  `date_of_birth` <= '1975-12-31';
+
+--------------------------------------------------------------------------------------
+
+Quanti paganti sono anche ospiti?
+
+
+
+
+-------------------------------------------------------------------------------------
+
+Quanti posti letto ha l’hotel in totale?
+
+SELECT SUM(beds)
+FROM `stanze`;
