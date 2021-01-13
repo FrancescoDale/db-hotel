@@ -20,6 +20,8 @@ dell’esecuzione della query)
 
 SELECT *
 FROM `ospiti`
-WHERE `date_of_birth` < '2001-01-13';
+WHERE `date_of_birth` <= '2001-01-13';
 
 ------------------------------------------------------------------------------------------
+
+Seleziona tutti gli ospiti il cui nome inizia con la D
