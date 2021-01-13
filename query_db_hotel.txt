@@ -61,6 +61,13 @@ WHERE `document_type` = 'Driver License'
 AND  `date_of_birth` >= '1975-1-1'
 AND  `date_of_birth` <= '1975-12-31';
 
+oppure
+
+SELECT *
+FROM `ospiti`
+WHERE `document_type` = 'Driver License'
+AND year(date_of_birth) = 1975;
+
 --------------------------------------------------------------------------------------
 
 Quanti paganti sono anche ospiti?
