@@ -182,3 +182,12 @@ JOIN pagamenti ON prenotazioni.id = pagamenti.prenotazione_id
 WHERE stanze.floor = 1 AND pagamenti.status = 'accepted';
 
 --------------------------------------------------------------------------------
+
+Prendi i dati di fatturazione per la prenotazione con id=7
+
+SELECT pagamenti.prenotazione_id, pagamenti.price, paganti.lastname, paganti.name, paganti.address
+FROM `pagamenti`
+JOIN `paganti` ON pagamenti.pagante_id = paganti.id
+WHERE pagamenti.prenotazione_id = 7;
+
+--------------------------------------------------------------------------------
