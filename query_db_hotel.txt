@@ -96,7 +96,7 @@ GROUP BY
 
 Conta gli ospiti raggruppandoli per anno di nascita
 
-SELECT COUNT(id)
+SELECT COUNT(id), YEAR(`date_of_birth`)
 FROM `ospiti`
 GROUP BY YEAR(`date_of_birth`);
 
@@ -104,8 +104,10 @@ GROUP BY YEAR(`date_of_birth`);
 
 Somma i prezzi dei pagamenti raggruppandoli per status
 
-SELECT SUM(`price`)
+SELECT SUM(`price`), `status`
 FROM `pagamenti`
 GROUP BY `status`;
 
 --------------------------------------------------------------------------------
+
+Conta quante volte è stata prenotata ogni stanza
