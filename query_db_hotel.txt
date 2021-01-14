@@ -171,3 +171,14 @@ JOIN ospiti ON prenotazioni_has_ospiti.ospite_id = ospiti.id
 WHERE MONTH(prenotazioni.created_at) = 5 AND YEAR(prenotazioni.created_at) = 2018
 
 ----------------------------------------------------------------------------------------------------------------------------------
+
+Fai la somma di tutti i prezzi delle prenotazioni per le stanze del
+primo piano
+
+SELECT SUM(pagamenti.price)
+FROM `stanze`
+JOIN prenotazioni ON stanze.id = prenotazioni.stanza_id
+JOIN pagamenti ON prenotazioni.id = pagamenti.prenotazione_id
+WHERE stanze.floor = 1 AND pagamenti.status = 'accepted';
+
+--------------------------------------------------------------------------------
