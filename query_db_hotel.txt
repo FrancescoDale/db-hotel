@@ -111,3 +111,10 @@ GROUP BY `status`;
 --------------------------------------------------------------------------------
 
 Conta quante volte è stata prenotata ogni stanza
+
+SELECT COUNT(id), `stanza_id`
+FROM `prenotazioni`
+GROUP BY `stanza_id`
+ORDER BY COUNT(id) DESC;
+
+--------------------------------------------------------------------------------
