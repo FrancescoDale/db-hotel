@@ -118,3 +118,12 @@ GROUP BY `stanza_id`
 ORDER BY COUNT(id) DESC;
 
 --------------------------------------------------------------------------------
+
+Quante prenotazioni ha fatto l’ospite che ha fatto più prenotazioni?
+
+SELECT COUNT(`prenotazione_id`), `pagante_id`
+FROM `pagamenti`
+GROUP BY `pagante_id`
+ORDER BY COUNT(`prenotazione_id`) DESC;
+
+--------------------------------------------------------------------------------
